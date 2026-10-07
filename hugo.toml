@@ -6,7 +6,7 @@ theme = 'PaperMod'
 [params]
   author = 'Fallwindy'
   description = 'Fallwindy 的技术博客'
-  avatar = '/images/avatar.jpg'
+  avatar = '/images/avatar.png'
 
   github = 'https://github.com/fallwindy'
 
