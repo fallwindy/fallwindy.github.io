@@ -2,6 +2,7 @@ baseURL = 'https://fallwindy.github.io/'
 languageCode = 'zh-cn'
 title = 'Fallwindy Blog'
 
+theme = 'PaperMod'
 [pagination]
   pagerSize = 10
 
