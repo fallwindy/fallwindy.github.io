@@ -1,0 +1,102 @@
+/* ================================
+   Markdown / Article
+   ================================ */
+
+.post-content {
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+/* 标题 */
+.post-content h1 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.post-content h2 {
+    font-size: 1.55rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+/* 段落 */
+.post-content p {
+    margin: 1rem 0;
+}
+
+/* 列表 */
+.post-content ul,
+.post-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin: 0.4rem 0;
+}
+
+/* 引用 */
+.post-content blockquote {
+    margin: 1.5rem 0;
+    padding: 0.8rem 1rem;
+    border-left: 4px solid var(--primary);
+    background: var(--code-bg);
+}
+
+/* 行内代码 */
+.post-content code:not(pre code) {
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    background: var(--code-bg);
+    font-size: 0.9em;
+}
+
+/* 代码块 */
+.post-content pre {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* 图片 */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* 表格 */
+.post-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.post-content th,
+.post-content td {
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--border);
+}
+
+.post-content th {
+    font-weight: 600;
+}
+
+/* 链接 */
+.post-content a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* 分割线 */
+.post-content hr {
+    margin: 2.5rem 0;
+}

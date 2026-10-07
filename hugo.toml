@@ -1,11 +1,32 @@
 baseURL = 'https://fallwindy.github.io/'
 languageCode = 'zh-cn'
 title = 'Fallwindy Blog'
-
 theme = 'PaperMod'
+
 [pagination]
   pagerSize = 10
 
 [params]
   author = 'Fallwindy'
   description = 'Fallwindy 的技术博客'
+
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowRssButtonInSectionTermList = true
+
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    noClasses = false
