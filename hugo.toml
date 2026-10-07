@@ -1,0 +1,10 @@
+baseURL = 'https://fallwindy.github.io/'
+languageCode = 'zh-cn'
+title = 'Fallwindy Blog'
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = 'Fallwindy'
+  description = 'Fallwindy 的技术博客'
