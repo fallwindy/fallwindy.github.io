@@ -1,3 +1,282 @@
+/* =========================================================
+   Blog two-column layout
+   ========================================================= */
+
+.blog-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 760px);
+    gap: 70px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* =========================================================
+   Sidebar
+   ========================================================= */
+
+.blog-sidebar {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+}
+
+.sidebar-profile {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.sidebar-avatar-link {
+    display: inline-block;
+}
+
+.sidebar-avatar,
+.sidebar-avatar-placeholder {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+}
+
+.sidebar-avatar {
+    object-fit: cover;
+}
+
+.sidebar-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--code-bg);
+    color: var(--primary);
+
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.sidebar-name {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.sidebar-description {
+    margin: 0;
+
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   Statistics
+   ========================================================= */
+
+.sidebar-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    margin-bottom: 30px;
+}
+
+.sidebar-stats a {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.sidebar-stats strong {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.sidebar-stats span {
+    margin-top: 5px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   Sidebar navigation
+   ========================================================= */
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    color: var(--secondary);
+
+    font-weight: 600;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-links a {
+    padding: 7px 0;
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+.sidebar-links a:hover {
+    color: var(--tertiary);
+}
+
+
+/* =========================================================
+   Main content
+   ========================================================= */
+
+.blog-main {
+    min-width: 0;
+}
+
+.blog-main-header {
+    margin-bottom: 30px;
+}
+
+.blog-main-header h1 {
+    margin-bottom: 8px;
+}
+
+.blog-main-header p {
+    margin: 0;
+
+    color: var(--secondary);
+}
+
+
+/* =========================================================
+   Post list
+   ========================================================= */
+
+.post-entry-custom {
+    padding: 26px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.post-entry-custom:first-child {
+    padding-top: 0;
+}
+
+.post-entry-title {
+    margin: 0 0 8px;
+
+    font-size: 23px;
+}
+
+.post-entry-title a {
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+.post-entry-title a:hover {
+    color: var(--tertiary);
+}
+
+.post-entry-meta {
+    margin-bottom: 12px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+}
+
+.post-entry-summary {
+    color: var(--secondary);
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.post-entry-footer {
+    margin-top: 14px;
+}
+
+.post-entry-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.post-entry-tags a {
+    color: var(--secondary);
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.post-entry-tags a:hover {
+    color: var(--tertiary);
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    .blog-layout {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 25px 20px;
+    }
+
+    .blog-sidebar {
+        position: static;
+
+        text-align: center;
+    }
+
+    .sidebar-stats {
+        max-width: 320px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sidebar-links {
+        align-items: center;
+    }
+
+}
+
+
+
+
 /* ================================
    Markdown / Article
    ================================ */

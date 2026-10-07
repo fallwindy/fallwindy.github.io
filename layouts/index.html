@@ -1,0 +1,88 @@
+{{- define "main" }}
+
+<div class="blog-layout">
+
+  {{ partial "sidebar.html" . }}
+
+  <main class="blog-main">
+
+    <div class="blog-main-header">
+
+      <div>
+        <h1>最新文章</h1>
+        <p>记录学习、工作和技术实践。</p>
+      </div>
+
+    </div>
+
+
+    <div class="post-list">
+
+      {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+      {{- range $pages }}
+
+      <article class="post-entry-custom">
+
+        <header class="post-entry-header">
+
+          <h2 class="post-entry-title">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h2>
+
+        </header>
+
+
+        <div class="post-entry-meta">
+
+          {{ .Date.Format "2006-01-02" }}
+
+          {{ with .Params.categories }}
+            · {{ delimit . ", " }}
+          {{ end }}
+
+        </div>
+
+
+        {{ with .Summary }}
+
+        <div class="post-entry-summary">
+          {{ . | plainify | truncate 180 }}
+        </div>
+
+        {{ end }}
+
+
+        <footer class="post-entry-footer">
+
+          {{ with .Params.tags }}
+
+            <div class="post-entry-tags">
+
+              {{ range . }}
+
+              <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">
+                #{{ . }}
+              </a>
+
+              {{ end }}
+
+            </div>
+
+          {{ end }}
+
+        </footer>
+
+      </article>
+
+      {{- end }}
+
+    </div>
+
+  </main>
+
+</div>
+
+{{- end }}

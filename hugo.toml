@@ -3,12 +3,16 @@ languageCode = 'zh-cn'
 title = 'Fallwindy Blog'
 theme = 'PaperMod'
 
-[pagination]
-  pagerSize = 10
-
 [params]
   author = 'Fallwindy'
   description = 'Fallwindy 的技术博客'
+  avatar = '/images/avatar.jpg'
+
+  github = 'https://github.com/fallwindy'
+
+  email = '你的邮箱@example.com'
+
+  mainSections = ['posts']
 
   ShowReadingTime = true
   ShowCodeCopyButtons = true
@@ -16,17 +20,42 @@ theme = 'PaperMod'
   TocOpen = false
   ShowBreadCrumbs = true
   ShowPostNavLinks = true
-  ShowRssButtonInSectionTermList = true
 
   defaultTheme = 'auto'
   disableThemeToggle = false
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 10
 
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    noClasses = false
+[[menu.main]]
+  identifier = "categories"
+  name = "分类"
+  url = "/categories/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 50
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 60

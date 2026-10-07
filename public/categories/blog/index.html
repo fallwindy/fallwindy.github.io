@@ -10,7 +10,7 @@
 <meta name="description" content="Fallwindy 的技术博客">
 <meta name="author" content="Fallwindy">
 <link rel="canonical" href="http://localhost:1313/categories/blog/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.28c65096efae5894092b78c4be829bb5ebe7fe2fdaccf061241e7cfa1a0e4256.css" integrity="sha256-KMZQlu&#43;uWJQJK3jEvoKbtevn/i/azPBhJB58&#43;hoOQlY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -96,11 +96,52 @@
             </div>
         </div>
         <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header">
+<header class="page-header"><nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/categories/">Categories</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
   <h1>
     Blog
   </h1>
@@ -108,18 +149,23 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Hello World
+    <h2 class="entry-hint-parent">Markdown 渲染测试
     </h2>
   </header>
   <div class="entry-content">
-    <p>Hello World 这是我的新技术博客。
-以后这里会记录：
-C&#43;&#43; Linux CMake OpenGL Vulkan 图形学 软件开发 代码示例 </p>
+    <p>Markdown 渲染测试 这是一个用于测试 Hugo Markdown 渲染效果的页面。
+1. 文本 这是普通文本。
+这里有 粗体、斜体、inline code。
+2. 列表 C&#43;&#43; Linux CMake OpenGL Vulkan 有序列表：
+编译 链接 运行 3. 引用 Hugo 使用 Goldmark 处理 Markdown。
+4. C&#43;&#43;代码 #include &lt;iostream&gt; int main() { std::cout &lt;&lt; &#34;Hello Hugo!&#34; &lt;&lt; std::endl; return 0; } 5. CMake代码 cmake_minimum_required(VERSION 3.20) project(Hello) add_executable(Hello main.cpp) 6. 表格 API 平台 类型 OpenGL 跨平台 Graphics API Vulkan 跨平台 Graphics API DirectX Windows Graphics API 7. 链接 这是一个GitHub链接。
+8. 图片 以后可以这样插入图片：
+...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-10-07 00:00:00 +0000 UTC'>October 7, 2026</span>&nbsp;·&nbsp;<span>Fallwindy</span></footer>
-  <a class="entry-link" aria-label="post link to Hello World" href="http://localhost:1313/posts/hello-world/"></a>
+<span title='2026-10-07 00:00:00 +0000 UTC'>October 7, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Fallwindy</span></footer>
+  <a class="entry-link" aria-label="post link to Markdown 渲染测试" href="http://localhost:1313/posts/hello-world/"></a>
 </article>
     </main>
     

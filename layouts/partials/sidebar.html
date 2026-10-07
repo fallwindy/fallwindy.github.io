@@ -1,0 +1,103 @@
+<aside class="blog-sidebar">
+
+  <div class="sidebar-profile">
+
+    <a href="{{ "/" | relURL }}" class="sidebar-avatar-link">
+      {{ with .Site.Params.avatar }}
+        <img
+          class="sidebar-avatar"
+          src="{{ . | relURL }}"
+          alt="{{ $.Site.Params.author }}"
+        >
+      {{ else }}
+        <div class="sidebar-avatar-placeholder">
+          F
+        </div>
+      {{ end }}
+    </a>
+
+    <h2 class="sidebar-name">
+      {{ .Site.Params.author | default .Site.Title }}
+    </h2>
+
+    <p class="sidebar-description">
+      {{ .Site.Params.description }}
+    </p>
+
+  </div>
+
+
+  <div class="sidebar-stats">
+
+    <a href="{{ "/posts/" | relURL }}">
+      <strong>{{ len (where .Site.RegularPages "Type" "in" (slice "posts")) }}</strong>
+      <span>文章</span>
+    </a>
+
+    <a href="{{ "/categories/" | relURL }}">
+      <strong>{{ len .Site.Taxonomies.categories }}</strong>
+      <span>分类</span>
+    </a>
+
+    <a href="{{ "/tags/" | relURL }}">
+      <strong>{{ len .Site.Taxonomies.tags }}</strong>
+      <span>标签</span>
+    </a>
+
+  </div>
+
+
+  <div class="sidebar-section">
+
+    <h3>导航</h3>
+
+    <nav class="sidebar-links">
+
+      <a href="{{ "/posts/" | relURL }}">
+        <span>文章</span>
+      </a>
+
+      <a href="{{ "/categories/" | relURL }}">
+        <span>分类</span>
+      </a>
+
+      <a href="{{ "/tags/" | relURL }}">
+        <span>标签</span>
+      </a>
+
+      <a href="{{ "/archives/" | relURL }}">
+        <span>归档</span>
+      </a>
+
+      <a href="{{ "/about/" | relURL }}">
+        <span>关于我</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+
+  <div class="sidebar-section">
+
+    <h3>Links</h3>
+
+    <nav class="sidebar-links">
+
+      {{ with .Site.Params.github }}
+      <a href="{{ . }}" target="_blank" rel="noopener">
+        GitHub
+      </a>
+      {{ end }}
+
+      {{ with .Site.Params.email }}
+      <a href="mailto:{{ . }}">
+        Email
+      </a>
+      {{ end }}
+
+    </nav>
+
+  </div>
+
+</aside>
